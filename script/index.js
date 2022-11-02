@@ -1,6 +1,4 @@
 
-//  import "../pages/playVideo.html"
-
 async function fetchData() {
     let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=20&q=indian popular&type=video&part=snippet&key=AIzaSyA5q3pQA9OmPNeZUgXfjTgirhyqdzV4I5M`);
     let data = await res.json();
@@ -31,14 +29,10 @@ function showData() {
         card.addEventListener("click", function () {
             let videoId = video.id.videoId;
             localStorage.setItem("videoId", JSON.stringify(videoId))
-
             window.open("./playVideo.html", '_blank').focus();
 
         })
     })
-
-    // console.log(data);
-
 }
 
 async function searchData() {

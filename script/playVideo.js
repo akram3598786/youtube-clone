@@ -9,3 +9,4 @@ iframe.width = "100%";
 iframe.height = "100%";
 iframe.allowFullscreen = true;
 content.append(iframe);
+
