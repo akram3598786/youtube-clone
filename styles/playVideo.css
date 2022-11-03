@@ -127,3 +127,50 @@
       width: 80%;
       margin: auto;
   }
+
+  @media screen and ((min-width : 819px) and (max-width: 1068px)) {
+
+    .side-bar,.right {
+      display: none;  
+    }
+    .header {
+      justify-content: space-around;
+    }
+    #content{
+      grid-template-columns: repeat(2,1fr);
+    }
+    #content > div{
+      margin: auto;
+    }
+    main {
+      justify-content: center;
+      align-items: center;
+    }
+  
+  }
+  
+  @media screen and  (max-width: 819px) {
+    .search input {
+      width: 160px;
+      padding:6px; 
+    }
+    
+    .side-bar,.right {
+      display: none;  
+    }
+    main {
+      padding: 5px;
+      position: relative;
+     }
+    #content{
+      grid-template-columns: repeat(1,1fr);
+      padding: 5px;
+      position: absolute;
+      top: 20px;
+    }
+    #content iframe{
+      height: 400px;
+      width: 95vw;
+    }
+   
+  }

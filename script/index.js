@@ -27,7 +27,7 @@ function showData() {
         card.addEventListener("click", function () {
             let videoId = video.id.videoId;
             localStorage.setItem("videoId", JSON.stringify(videoId))
-            window.open("./playVideo.html", '_blank').focus();
+            window.open("./playVideo.html", '_self').focus();
 
         })
     })
