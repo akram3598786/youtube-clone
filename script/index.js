@@ -1,10 +1,12 @@
 
 async function fetchData() {
+
     let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=20&q=indian popular&type=video&part=snippet&key=AIzaSyA5q3pQA9OmPNeZUgXfjTgirhyqdzV4I5M`);
     let data = await res.json();
     data = data.items;
     localStorage.setItem("ytData", JSON.stringify(data));
     showData();
+    
 }
 
 function showData() {
@@ -36,15 +38,15 @@ function showData() {
 async function searchData() {
     event.preventDefault();
     let query = document.getElementById("input").value;
-   // console.log(query);
+
+    // console.log(query);
     let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=20&q=${query}&type=video&regionCode=IN&part=snippet&key=AIzaSyA5q3pQA9OmPNeZUgXfjTgirhyqdzV4I5M`);
     let data = await res.json();
     data = data.items;
     localStorage.setItem("ytData", JSON.stringify(data));
     showData();
+
 }
 
 let box = document.getElementById("content");
-
-// for by default getting videos on page
-fetchData();
+fetchData() // for by default getting videos on page
