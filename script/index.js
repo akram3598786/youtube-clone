@@ -10,7 +10,6 @@ async function fetchData() {
 }
 
 function showData() {
-
     box.innerHTML = "";
     let data = JSON.parse(localStorage.getItem("ytData"));
     data.forEach(function (video) {
@@ -30,7 +29,6 @@ function showData() {
             let videoId = video.id.videoId;
             localStorage.setItem("videoId", JSON.stringify(videoId))
             window.open("./playVideo.html", '_self').focus();
-
         })
     })
 }
@@ -38,7 +36,7 @@ function showData() {
 async function searchData() {
     event.preventDefault();
     let query = document.getElementById("input").value;
-
+    localStorage.setItem("YoutubeSerchQuery", query);
     // console.log(query);
     let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=20&q=${query}&type=video&regionCode=IN&part=snippet&key=AIzaSyA5q3pQA9OmPNeZUgXfjTgirhyqdzV4I5M`);
     let data = await res.json();
