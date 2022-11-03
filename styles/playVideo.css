@@ -138,8 +138,8 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
  
  }
 
@@ -175,15 +175,15 @@
     }
     main {
       padding: 5px;
-      position: relative;
+      /* position: relative; */
      }
     #relatedVideos{
       grid-template-columns: repeat(1,1fr);
       padding: 5px;
-      position: absolute;
-      top: 20px;
+      /* position: absolute; */
+      /* top: 20px; */
     }
-    #relatedVideos iframe{
+    #videoDiv{
       height: 400px;
       width: 95vw;
     }
