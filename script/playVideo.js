@@ -16,6 +16,7 @@ async function getVideos(query) {
     let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=20&q=${query}&type=video&regionCode=IN&part=snippet&key=AIzaSyA5q3pQA9OmPNeZUgXfjTgirhyqdzV4I5M`);
     let data = await res.json();
     data = data.items;
+    // let filtered = data.filter((video)=>video.id != videoId);
     localStorage.setItem("ytData", JSON.stringify(data));
     showData();
     
@@ -29,7 +30,6 @@ function showData() {
         let card = document.createElement("div");
 
         let image = document.createElement("img");
-
         image.src = video.snippet.thumbnails.medium.url;
 
         let title = document.createElement("p");

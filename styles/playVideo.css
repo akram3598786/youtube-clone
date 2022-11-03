@@ -144,7 +144,6 @@
  }
 
   @media screen and ((min-width : 819px) and (max-width: 1068px)) {
-
     .side-bar,.right {
       display: none;  
     }
